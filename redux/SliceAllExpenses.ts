@@ -1,39 +1,43 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
-interface AuthState {
+interface Expense {
+  id: string;
+  type: string | null;
+  date: string | null;
+  amount: string | null;
+  description: string | null;
+}
+
+interface ExpenseState {
   isLoading: boolean;
   status: string | null;
   message: string | null;
-  user: {
-    username: string;
-    password: string;
-    name: string;
-  } | null;
+  expenses: Expense[];
 }
 
-const initialState: AuthState = {
+const initialState: ExpenseState = {
   isLoading: false,
   status: null,
   message: null,
-  user: null,
+  expenses: [],
 };
 
 const authSlice = createSlice({
-  name: "auth",
+  name: "expenses",
   initialState: initialState,
   reducers: {
-    login: (state: AuthState, actions) => {
+    getAllExpenses: (state: ExpenseState) => {
       return {
         ...state,
         isLoading: true,
         status: null,
         message: null,
-        user: null,
+        expenses: [],
       };
     },
-    loginSuccess: (state: AuthState, actions) => {
+    getAllExpensesSucceed: (state: ExpenseState, actions) => {
       const data = actions.payload;
-      console.log("Login Success");
+      console.log("Expenses Fetched");
       console.log(data);
 
       return {
@@ -41,20 +45,21 @@ const authSlice = createSlice({
         isLoading: false,
         status: data.status,
         message: data.message,
-        user: data.data,
+        expenses: data.data.resources,
       };
     },
-    loginFailed: (state: AuthState) => {
+    getAllExpensesFailed: (state: ExpenseState) => {
       return {
         ...state,
         isLoading: false,
         status: null,
         message: null,
-        user: null,
+        expenses: [],
       };
     },
   },
 });
 
-export const { login, loginSuccess, loginFailed } = authSlice.actions;
+export const { getAllExpenses, getAllExpensesSucceed, getAllExpensesFailed } =
+  authSlice.actions;
 export default authSlice.reducer;

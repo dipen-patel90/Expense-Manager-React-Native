@@ -1,14 +1,16 @@
 import { combineReducers, configureStore, Tuple } from "@reduxjs/toolkit";
-import authReducer from "./SliceAuth";
 import createSagaMiddleware from "@redux-saga/core";
-import expensesReducer from "./SliceExpense";
 import { watcherSaga } from "../saga/RootSaga";
+import authReducer from "./SliceAuth";
+import expensesReducer from "./SliceAllExpenses";
+import expensesDetailReducer from "./SliceExpenseDetails";
 
 const sagaMiddleware = createSagaMiddleware();
 
 const reducer = combineReducers({
   authReducer: authReducer,
   expensesReducer: expensesReducer,
+  expensesDetailReducer: expensesDetailReducer,
 });
 
 export const store = configureStore({
