@@ -1,8 +1,14 @@
 import axios from "axios";
+import { BASE_URL } from "../APIConstants";
 
-export function loginRQ() {
+export function loginRQ(username, password) {
   return axios.request({
-    method: "get",
-    url: "https://my-json-server.typicode.com/typicode/demo/posts",
+    method: "post",
+    baseURL: BASE_URL,
+    url: "/login",
+    data: {
+      username: username,
+      password: password,
+    },
   });
 }

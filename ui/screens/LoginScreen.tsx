@@ -36,12 +36,18 @@ const LoginScreen = ({ navigation, route }: LoginProps) => {
       />
 
       <Text>{authData?.user?.name}</Text>
-      <Text>{authData?.user?.dob}</Text>
+      <Text>{authData?.user?.username}</Text>
+      <Text>{authData?.user?.password}</Text>
 
       <Button
         title="Login"
         onPress={() => {
-          dispatch(login());
+          dispatch(
+            login({
+              username: "abc",
+              password: "123",
+            })
+          );
         }}
       />
     </View>
