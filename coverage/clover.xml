@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1715245033695" clover="3.2.0">
-  <project timestamp="1715245033695" name="All files">
-    <metrics statements="91" coveredstatements="3" conditionals="6" coveredconditionals="0" methods="15" coveredmethods="1" elements="112" coveredelements="4" complexity="0" loc="91" ncloc="91" packages="50" files="53" classes="53"/>
+<coverage generated="1715245181512" clover="3.2.0">
+  <project timestamp="1715245181512" name="All files">
+    <metrics statements="91" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="15" coveredmethods="0" elements="112" coveredelements="0" complexity="0" loc="91" ncloc="91" packages="50" files="53" classes="53"/>
     <package name=".expo.metro">
       <metrics statements="2" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="polyfill.js" path="/Users/dipen.ptl1/Documents/Projects/GIT/Expense-Manager-React-Native/.expo/metro/polyfill.js">
@@ -347,12 +347,12 @@
       </file>
     </package>
     <package name="saga">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="RootSaga.js" path="/Users/dipen.ptl1/Documents/Projects/GIT/Expense-Manager-React-Native/saga/RootSaga.js">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
+        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
       </file>
     </package>
     <package name="saga.handlers">
